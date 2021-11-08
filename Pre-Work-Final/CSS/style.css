@@ -1,0 +1,125 @@
+*{
+   
+   box-sizing: content-box;
+}
+/*display flex*/
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    background: -webkit-linear-gradient(#E5F2BB, #b1a724);
+    background: -o-linear-gradient(#E5F2BB, #b1a724);
+    background: -moz-linear-gradient(#E5F2BB,#b1a724);
+    background: linear-gradient(#E5F2BB, #b1a724);
+    text-align: center;
+}
+h2{
+color: blueviolet;
+text-decoration: underline;
+font-size: 50px;
+
+}
+
+p{
+    font-size: 20px;
+}
+#paragraphs{
+    color: green;
+}
+.headings{
+    color: red;
+}
+ul{
+    font-style: italic;
+   list-style-position: inside;
+   line-height: 40px;
+   text-align: center;
+   list-style-type: square  ;
+   padding-right: 90px;
+   
+}
+
+ol{
+    
+    display: inline;
+    padding-left: 500px;
+    list-style-position: inside;
+    font-size: 30px;
+   text-align: justify;
+
+}
+table, th, td {
+    border: 2px solid blueviolet;
+} 
+
+.headings{
+    font-size: 30px;
+    color: brown;
+}
+@media screen and (max-width: 1200px) {
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 10px;
+    }
+   
+}
+ 
+.image{
+
+    height: auto;
+    border-radius: 100%;
+}
+@media  screen and (max-width:1200px) {
+   .image img{
+       
+         max-width: 70%;
+         
+         border-radius: 30%;
+     }
+     
+ }
+
+nav{
+    font-size: 30px;
+    position: relative;
+}
+ input{
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+form{
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+
+#check, #fname, #year-group, #lname, #comment, #gender{
+    padding-top: 20px;
+}
+input[type="submit"]{
+    background-color:#E5F2BB;
+}
+#form p{
+    font-size: 30px;
+    color: rgb(43, 46, 226);
+}
+
+input[type="submit"]{
+    font-size: 20px;
+    width: 90px;
+   
+}
+.footer{
+    background: -webkit-linear-gradient(#E5F2BB, #362c97);
+    background: -o-linear-gradient(#E5F2BB, #362c97);
+    background: -moz-linear-gradient(#E5F2BB,#362c97);
+    background: linear-gradient(#E5F2BB, #362c97);
+    position: relative;
+
+}
