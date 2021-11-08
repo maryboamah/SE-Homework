@@ -5,7 +5,7 @@
 /*display flex*/
 .main-div{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -52,8 +52,15 @@ ol{
 
 }
 table, th, td {
-    border: 2px solid blueviolet;
+  width: 700px;
+    border: 1px solid blueviolet;
+   margin-left: auto;
+   margin-right: auto;
+    
+    color: rgb(20, 5, 231);
+    
 } 
+
 
 .headings{
     font-size: 30px;
@@ -121,5 +128,23 @@ input[type="submit"]{
     background: -moz-linear-gradient(#E5F2BB,#362c97);
     background: linear-gradient(#E5F2BB, #362c97);
     position: relative;
+
+}
+.maverick{
+    display: flex;
+    flex-direction: row;
+flex-wrap: wrap;
+    flex: 2;
+ justify-content: center;
+}
+.maverick-image img{
+    height: 600px;
+    width: 600px;
+    padding-right: 30px;
+}
+.maverick-youtube iframe{
+    height: 600px;
+    width: 600px;
+    padding-right: 30px;
 
 }
