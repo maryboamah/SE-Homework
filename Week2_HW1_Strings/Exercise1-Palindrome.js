@@ -14,7 +14,7 @@ for(let i= len; i>=0; i--){
 
 }
 
-
+//checking if reversed string is the same us the original str.
 if (strReverse === str) {
     console.log("This is a palindrome")
 }else{
