@@ -19,9 +19,8 @@ let i = 0;
 //using loop to get the individual characters in a string
 while(i<=len){
    
- if(str.charAt(i)== 1 || str.charAt(i)== 2||str.charAt(i)== 3 
- ||str.charAt(i)== 4 ||str.charAt(i)== 5||str.charAt(i)== 6||str.charAt(i)== 7||str.charAt(i)== 8||str.charAt(i)== 9||str.charAt(i)== 0){
-myNumbers+=str.charAt(i) + "";
+ if(str.charAt(i)== "1" || str.charAt(i)=="2"||str.charAt(i)== "3" ||str.charAt(i)== "4" ||str.charAt(i)== "5"||str.charAt(i)== "6"||str.charAt(i)== 7||str.charAt(i)== "8"||str.charAt(i)== "9"||str.charAt(i)== "0"){
+myNumbers+=str.charAt(i);
  }
   else if(strUpper.charAt(i)== "A" || strUpper.charAt(i)== "B"||strUpper.charAt(i)== "C" ||strUpper.charAt(i)== "D" 
  ||strUpper.charAt(i)== "E"||strUpper.charAt(i)== "F"||strUpper.charAt(i)== "G"||strUpper.charAt(i)== "H"||strUpper.charAt(i)== "I"
@@ -31,7 +30,9 @@ myNumbers+=str.charAt(i) + "";
  ||strUpper.charAt(i)== "W"||strUpper.charAt(i)== "X"||strUpper.charAt(i)== "Y"||strUpper.charAt(i)== "Z"){
  
  
-    myLetters+=strUpper.charAt(i) + "";
+    myLetters+=strUpper.charAt(i) ;
+}else if(str.charAt(i) == " "){
+
 }else{
     mySpecialChar+=str.charAt(i)
 }
