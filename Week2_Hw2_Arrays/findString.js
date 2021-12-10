@@ -1,39 +1,53 @@
-console.log("my")
-let prompt = require('prompt-sync')()
-//let str = prompt("Enter a anything ")
-let hisArray = [1,2,3,"me","him","them"]
 
+//function to find the a string and its position in an array
+
+let myArray1= [1,2,3,4,5,6,"home","me","you"]
+document.getElementById("myArray").innerHTML = myArray1
 
 function findStrOrNum(myArray){
-    let str = prompt("Enter a anything ")
+let str = document.getElementById("word").value
 
-    //iterate through the array
-    for(let i = 0; i<myArray.length; i++){
+//iterate through the array
+for(let i = 0; i<myArray.length; i++){
 
-        //find words with type string and match user string
-        if(typeof(myArray[i] )== "string" && (myArray[i].toUpperCase()==str.toUpperCase())){
+    //find words with type string and match user string
+    if(typeof(myArray[i] )== "string" && (myArray[i].toUpperCase()==str.toUpperCase())){
 
-            //get the position of the word
-            let wordPosition = i
-            
-            return "The position of your word " +"'"+str +"'" + " is " + (wordPosition+1)
-          
-    
-    
-        }
-        //all other data types 
-        else if((myArray[i]==str)){
-            let numPosition = i
-            return "The position of your number " + "'"+str +"'" + " is " + (numPosition+1)
-            
-        } 
-       
+        //get the position of the word
+        let wordPosition = i
+        
+        return document.getElementById("result").innerHTML = "The position of your word " +"'"+str +"'" + " is " + (wordPosition+1)
+      
+
+
     }
-    //if no condition is met
-    return  "Your word/number " + "'"+str +"'"+" was Not found"
+    //all other data types 
+    else if((myArray[i]==str)){
+        let numPosition = i
+        return document.getElementById("result").innerHTML = "The position of your number " + "'"+str +"'" + " is " + (numPosition+1)
+        
+    } 
+   
 }
-console.log(findStrOrNum(hisArray))
+//if no condition is met
+return  document.getElementById("result").innerHTML ="Your word/number " + "'"+str +"'"+" was Not found"
 
-document.getElementById("findString").innerHTML += findStrOrNum(hisArray)
+}
+
+
+function addArray(array){
+
+let arr = document.getElementById("addarray").value
+arr = arr.split('').join("")
+ newArray = array.push(arr)
+ newArray = array.join("")
+ console.log(arr)
+ 
+ return document.getElementById("myArray").innerHTML = array
+}
+
+
+
+
 
 

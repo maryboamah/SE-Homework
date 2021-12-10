@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styling.css">
+    
+    <title>
+        My HomeWork Week2_Hw2_Arrays Exercise 2
+    </title>
+</head>
+<body>
+    <h1>Home Work|Exercise 2</h1>
+    
+    <p>Submit a word or number to find its position and if it belongs to these group of words and number<p id="myArray"></p></p>
+        <p id="result"></p>
+
+    <form id="form1" onsubmit="findStrOrNum(myArray1);  return false">
+        <label for="Word">Your Word:</label>
+        <input type="text" name="word" id="word"  placeholder="Submit a Word">
+    
+        <input type="submit" value="Submit" >
+      </form> <br>
+      <p>Add your words/numbers to the array</p>
+      <form id="form2" onsubmit="addArray(myArray1); return false">
+        <label for="Word">Add Array:</label>
+        <input type="text" name="array" id="addarray"  placeholder="Submit an Array">
+    
+        <input type="submit" value="Submit" >
+      </form> <br>
+
+
+      
+    
+<script src="findString.js"></script>
+<script src="longestword.js"></script>
+<script src="addelements.js"></script>
+</body>
+</html>
