@@ -1,10 +1,12 @@
 console.log("my")
 let prompt = require('prompt-sync')()
-let str = prompt("Enter a anything ")
+//let str = prompt("Enter a anything ")
 let hisArray = [1,2,3,"me","him","them"]
 
 
 function findStrOrNum(myArray){
+    let str = prompt("Enter a anything ")
+
     //iterate through the array
     for(let i = 0; i<myArray.length; i++){
 
@@ -31,5 +33,7 @@ function findStrOrNum(myArray){
     return  "Your word/number " + "'"+str +"'"+" was Not found"
 }
 console.log(findStrOrNum(hisArray))
+
+document.getElementById("findString").innerHTML += findStrOrNum(hisArray)
 
 

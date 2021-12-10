@@ -9,3 +9,4 @@ for(let i = 0; i< myArray.length; i++){
     addedElement += myArray[i]
 }
 console.log("The sum of the elements in the array = " + addedElement)
+document.getElementById("addelements").innerHTML = "The sum of the elements in the array " + myArray + " = " + addedElement
