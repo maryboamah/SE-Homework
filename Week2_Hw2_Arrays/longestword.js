@@ -1,10 +1,11 @@
 //Write a program to find the longest element in a string array.
-let hisArray = [1,2,3,"me","him","them", "happyhappy", 1000000001,6,7,"happyhappy"]
+let myLongestWordArray = ["me","him","them", "happy","sad", "miracle", "Hovered", "Pink"]
+//adding array to html document
+document.getElementById("longestWordArray").innerHTML = "My Longest Word Array = " +myLongestWordArray
 
-let myCountArray=[]
 
 function findLongestWord(array){
-    
+    let myCountArray=[]
     for(let i=0; i<array.length; i++){
      
         //change each element to string and find length and make another array called my count array made up of numbers
@@ -31,8 +32,24 @@ for(let k=0; k<allIndex.length;k++){
     
 }
 
-return "The longest word(s) is/are " + allLongestWords
+return  document.getElementById("myLongestWord").innerHTML = "The longest word(s) in the array is(are)  " + allLongestWords
 
 }
 
-console.log(findLongestWord(hisArray))
+
+
+
+//adding words by user
+
+function addNewWord(array){
+    //get user array
+    let arr = document.getElementById("addlongword").value
+    //make a new array with added string so it doesn
+     newArray = array.push(arr)
+     
+      document.getElementById("longestWordArray").innerHTML = array
+
+      return findLongestWord(array)
+     
+    }
+    findLongestWord(myLongestWordArray)
