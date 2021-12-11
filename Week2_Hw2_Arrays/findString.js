@@ -39,10 +39,10 @@ function addArray(array){
 let arr = document.getElementById("addarray").value
 //make a new array with added string so it doesn
  newArray = array.push(arr)
- newArray = array.join("")
- console.log(arr)
+ 
  return document.getElementById("myArray").innerHTML = array
 }
+
 
 
 
