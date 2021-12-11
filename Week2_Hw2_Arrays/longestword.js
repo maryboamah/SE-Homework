@@ -2,10 +2,10 @@
 let myLongestWordArray = ["me","him","them", "happy","sad", "miracle", "Hovered", "Pink"]
 //adding array to html document
 document.getElementById("longestWordArray").innerHTML = "My Longest Word Array = " +myLongestWordArray
-
+let myCountArray=[]
 
 function findLongestWord(array){
-    let myCountArray=[]
+    
     for(let i=0; i<array.length; i++){
      
         //change each element to string and find length and make another array called my count array made up of numbers
@@ -32,7 +32,7 @@ for(let k=0; k<allIndex.length;k++){
     
 }
 
-return  document.getElementById("myLongestWord").innerHTML = "The longest word(s) in the array is(are)  " + allLongestWords
+return  document.getElementById("myLongestWord").innerHTML = `The longest word(s) in the array is(are)   <span style=color:Red> ${allLongestWords}</span>`
 
 }
 

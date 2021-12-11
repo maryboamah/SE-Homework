@@ -1,6 +1,6 @@
 //setting up array 
 let myaddElementArray = [1,2,4,4,6,5,8,10]
-document.getElementById("addarray").innerHTML = myaddElementArray
+document.getElementById("addarray").innerHTML = "Numbers Array = "+myaddElementArray
 
 //variable to put sum of all arrays
 
@@ -10,7 +10,7 @@ function addElement(array){
         addedElement += array[i]
         
     }
-    return document.getElementById("addedelements").innerHTML = "The sum of the elements in the array " + array + " = " + addedElement 
+    return document.getElementById("addedelements").innerHTML = `The sum of the elements in the array <span style=color:green> ${array}</span> = <span style=color:Red> ${addedElement}</span>`
 }
 //for loop to loop through all the arrays and add them to element
 
