@@ -1,7 +1,7 @@
 
 //function to find the a string and its position in an array
 
-let myArray1= [1,2,3,4,5,6,"home","me","you"]
+let myArray1= [1,2,3,4,5,6,"home","me","you",9,"soda"]
 document.getElementById("myArray").innerHTML = myArray1
 
 function findStrOrNum(myArray){
@@ -17,8 +17,7 @@ for(let i = 0; i<myArray.length; i++){
         let wordPosition = i
         
         return document.getElementById("result").innerHTML = "The position of your word " +"'"+str +"'" + " is " + (wordPosition+1)
-      
-
+    
 
     }
     //all other data types 
@@ -34,15 +33,14 @@ return  document.getElementById("result").innerHTML ="Your word/number " + "'"+s
 
 }
 
-
+//function for user to add more words to the array
 function addArray(array){
-
+//get user array
 let arr = document.getElementById("addarray").value
-arr = arr.split('').join("")
+//make a new array with added string so it doesn
  newArray = array.push(arr)
  newArray = array.join("")
  console.log(arr)
- 
  return document.getElementById("myArray").innerHTML = array
 }
 
