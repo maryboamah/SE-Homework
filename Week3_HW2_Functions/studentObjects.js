@@ -1,5 +1,5 @@
 const students =[{
-    fname:"Mansa",
+    firstname:"Mansa",
     schoolActivity:"boxing",
     gender:"female"},
     {
@@ -7,15 +7,15 @@ const students =[{
         schoolActivity:"Dancing",
         gender:"male"},
         {
-            fname:"Dennis",
+            firstname:"Dennis",
             schoolActivity:"singing",
             gender:"Male"},
             {
-                fname:"Nancy",
+                firstname:"Nancy",
                 schoolActivity:"Singing",
                 gender:"female"},
                 {
-                    fname:"Juliet",
+                    firstname:"Juliet",
                     schoolActivity:"Swimming",
                     gender:"Female"}
             
