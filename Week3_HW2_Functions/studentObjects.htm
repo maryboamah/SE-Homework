@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="styling.css">
+        
+ <title>
+    My HomeWork Week_Hw2_functions 
+</title>
+</head>
+<body>
+<h1><span id="blue"> Home Work </span><span>|</span><span style="color: brown;">Week3</span>|Exercise 3</h1>
+<p> This app helps you search for a student or group of students</p>
+    <p id="student"></p>
+
+
+
+
+
+
+  
+  <p>Input the search criteria and the search Word</p>
+<form id="form2" onsubmit=" getout1(); return false">
+    <label for="activity">Search Criteria</label>
+
+    <select name="students" id="selectoptions">
+        <option value="">--Please choose an option--</option>
+        <option value="firstname">Name</option>
+        <option value="schoolActivity">School Activity</option>
+        <option value="gender">Gender</option>
+       
+    </select>
+    <br>
+    <label for="activity">Search Word</label>
+    <input type="text" name="search" id="searchword"  placeholder="search">
+
+    <input type="submit" value="Submit" >
+  </form> <br>
+
+
+<script src="studentObjects.js"></script>
+    </body>
+</html>
