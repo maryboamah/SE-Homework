@@ -21,6 +21,10 @@ const students =[{
             
 ]
 
+document.getElementById("allstudents").innerHTML= `<table> <tr><th>Name</th><th>School Activity</th><th>Gender</th</tr> `+students.map(function(user){
+    return  `<tr><td>${user.firstname}</td><td>${user.schoolActivity}</td><td>${user.gender}`
+    
+}).join('') + `</td></tr></table>`
 
 function getout1(){
     
@@ -32,8 +36,12 @@ function getout1(){
         return document.getElementById("student").innerText = "Sorry Your search did not match any student"
 
     }else{
-    return document.getElementById("student").innerText = `These are the results of your search: ${JSON.stringify(filterStudent)}`
+     document.getElementById("student").innerHTML = `<h3>Result From search</h3>`+`<table> <tr><th>Name</th><th>School Activity</th><th>Gender</th</tr> `+filterStudent.map(function(user){
+        return  `<tr><td>${user.firstname}</td><td>${user.schoolActivity}</td><td>${user.gender}`
+        
+    }).join('') + `</td></tr></table>`
 }
 
 }
+
 
