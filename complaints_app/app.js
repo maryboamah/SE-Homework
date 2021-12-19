@@ -26,20 +26,22 @@ buttons.forEach(function(currentBtn){
         .then((res)=>res.json())
         .then((data)=>{
             let complainType = data;
-            
+            let startDiv =`<div class = "map-grid">` 
             //get raw and extract complain type from the data
-            complain.innerHTML =complainType.map(function(complaint){
+            complainType.map(function(complaint){
                 
                     
 
-                return `<div class = "map-grid"><div class="complaint-is"><img src="images/list.png" style="width:15px">${complaint.descriptor} <div id="resolve" style="display:none">${ complaint.resolution_description}</div>`+`</div><div><button
+                return startDiv +=`<div class="complaint-is"><img src="images/list.png" style="width:17px">${complaint.descriptor} </div><div><button
                 ${onclick = function getResolve(){let press = document.getElementById("resolve")
                 
 
                 if(press.style.display==="none"){press.style.display="block"}else{press.style.display="none"}}} type="button" 
-                class="what-do-police">WHAT DID THE POLICE DO</button></div> </div>` 
+                class="what-do-police">WHAT DID THE POLICE DO</button></div><div id="resolve" style="display:none">${ complaint.resolution_description}</div>` 
 
             }).join('') ;
+            startDiv += `</div>`
+            complain.innerHTML = startDiv
 
     
         })
