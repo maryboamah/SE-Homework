@@ -32,7 +32,7 @@ buttons.forEach(function(currentBtn){
                 
                     
 
-                return `<div class = "map-grid"><div class="complaint-is">${complaint.complaint_type} <div id="resolve" style="display:none">${ complaint.resolution_description}</div>`+`</div><div><button
+                return `<div class = "map-grid"><div class="complaint-is"><img src="images/list.png" style="width:15px">${complaint.descriptor} <div id="resolve" style="display:none">${ complaint.resolution_description}</div>`+`</div><div><button
                 ${onclick = function getResolve(){let press = document.getElementById("resolve")
                 
 
