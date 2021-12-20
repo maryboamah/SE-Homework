@@ -36,6 +36,8 @@ buttons.forEach(function(currentBtn){
             }).join('') ;
             startDiv += `</div>`
             complain.innerHTML = startDiv
+
+            //use onclick to display the resolutions
             let resolvepage = document.getElementsByClassName("resolve")
 let buttonClick = document.getElementsByClassName("what-do-police")
             for(let i=0; i<resolvepage.length; i++){
