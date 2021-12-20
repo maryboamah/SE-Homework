@@ -1,13 +1,10 @@
-const buttons = document.querySelectorAll("button")
+const buttons = document.querySelectorAll(".borough")
 let complain = document.getElementById("complain-type")
 let complain_description = document.getElementById("description")
-let resolvepage = document.getElementById("resolve")
+
 //set limit for data
 let limit = 10;
-//function
-// function getResolve() {
-//     document.getElementById("resolve").style.display = "YOU CLICKED ME!";
-//   }
+
 
   
 //get borough from button
@@ -33,15 +30,32 @@ buttons.forEach(function(currentBtn){
                     
 
                 return startDiv +=`<div class="complaint-is"><img src="images/list.png" style="width:17px">${complaint.descriptor} </div><div><button
-                ${onclick = function getResolve(){let press = document.getElementById("resolve")
-                
-
-                if(press.style.display==="none"){press.style.display="block"}else{press.style.display="none"}}} type="button" 
-                class="what-do-police">WHAT DID THE POLICE DO</button></div><div id="resolve" style="display:none">${ complaint.resolution_description}</div>` 
+                 type="submit" 
+                class="what-do-police">WHAT DID THE POLICE DO</button></div><div class="resolve" style="display:none">${ complaint.resolution_description}</div>` 
 
             }).join('') ;
             startDiv += `</div>`
             complain.innerHTML = startDiv
+            let resolvepage = document.getElementsByClassName("resolve")
+let buttonClick = document.getElementsByClassName("what-do-police")
+            for(let i=0; i<resolvepage.length; i++){
+                buttonClick[i].onclick = function(){
+                    if(resolvepage[i].style.display ="block"){
+                        buttonClick[i].onclick = function(){
+                            resolvepage[i].style.display ="none"
+                        }
+                        }else if(resolvepage[i].style.display ="none"){
+                            buttonClick[i].onclick =function(){
+                                resolvepage[i].style.display ="block"
+
+                            }
+                      
+
+                    }
+                    
+                }
+
+            }
 
     
         })
