@@ -1,7 +1,8 @@
 
 
-function BedRoom(){
-    return(<div className="bedroom">
+function BedRoom(props){
+    return(<div className="bedroom" id= { `bed-${props.bednumber}`}>
+        <h2>{props.description}</h2>
 
     </div>)
 }

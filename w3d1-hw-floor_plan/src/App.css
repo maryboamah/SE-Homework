@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+/* .App {
+ 
 }
 
 .App-logo {
@@ -36,3 +36,97 @@
     transform: rotate(360deg);
   }
 }
+ */
+  
+ *{
+  box-sizing: border-box;
+  text-align: center;
+}
+
+  .App{
+   margin: 90px;
+   height: 1000px;
+   width: 900px;
+    display: -ms-grid;
+    display: grid;
+   
+
+   grid-template-areas: 'one   one one     one  two    two    two  two three     three'
+                        'one    one  one    one  two    two    two two  three     three'
+                         'four  four four   four two    two     two two  three    three'
+                         'seven seven seven seven  eight eight  nine nine nine     nine'
+                         'seven seven seven seven eight  eight   nine  nine nine     nine';
+  }
+  .bath{
+    background-color: #728831;
+
+  }
+  #full{
+    
+    grid-area: four;
+  }
+  #half{
+    
+    grid-area: eight;
+  }
+
+  .bedroom{
+    background-color: #2B7188;
+  }
+ 
+
+   #bed-1{
+grid-area: one;
+  }
+
+   #bed-2{
+grid-area: seven;
+  }
+  #bed-3{
+    grid-area: nine;
+  }
+  .sink{
+    background-color:#935613;
+    grid-area: two;
+  }
+  .kitchens{
+    grid-area:three;
+    display: grid;
+    grid-template-areas: 'one two'
+    'three three'
+    'three three'
+    'three three'
+    'three three'
+    'three three'
+    'three three'
+    'three three';
+   
+    
+    
+  }
+  .livingroom{
+    background-color: #C9AC82;
+    grid-area: two;
+  }
+  .kitchen{
+    display: grid;
+    background-color:#F1A73B;
+    grid-area: three ;
+
+    grid-template-areas: 'one two'
+                          'two tow'
+                          'three three';
+  }
+  .oven{
+    background-color: #C94716;
+    grid-area: one;
+  }
+
+  h2{
+    text-align: center;
+    text-align: center;
+    
+  }
+
+
+  
