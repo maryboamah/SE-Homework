@@ -1,7 +1,7 @@
 
 
 function Kitchen (){
-    return (<div>
+    return (<div className="kitchen">
 
     </div>)
 }

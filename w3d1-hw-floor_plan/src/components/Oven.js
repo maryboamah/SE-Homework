@@ -1,7 +1,7 @@
 
 
 function Oven(){
-    return(<div>
+    return(<div className="oven">
 
     </div>)
 }

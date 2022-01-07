@@ -1,7 +1,7 @@
 
 
 function Bath(){
-    return(<div>
+    return(<div className="bath">
 
     </div>)
 }
