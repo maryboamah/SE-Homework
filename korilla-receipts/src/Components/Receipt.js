@@ -8,6 +8,9 @@ function Receipt(props){
        <p><span className="head">Protein:</span> {props.ReceipData.order.protein}</p> 
        <p><span className="head">Rice:</span> {props.ReceipData.order.rice}</p>
        <p><span className="head">Sauce:</span> {props.ReceipData.order.sauce}</p>  
+       <p><span className="head">Drink:</span> {props.ReceipData.order.drink}</p>
+       <p><span className="head">Cost:</span> {`${props.ReceipData.order.toppings}`}</p>
+       
        </div>
        <div className="part2">
         
