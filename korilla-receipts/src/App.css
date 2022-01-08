@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,48 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App{
+ text-align: center;
+}
+.part2{
+  border-radius: 0px;
+  border-style:solid;
+  border-color: crimson;
+ 
+   text-align: left;   
+  
+}
+.part{
+  
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'one two three'
+                        ;
+grid-gap: 100px;
+margin: 90px;
+  
+}
+
+#receipt-0{
+  grid-area: one;
+}
+#receipt-1{
+  grid-area: two;
+}
+#receipt-2{
+  grid-area: three;
+}
+
+.head{
+  font-weight: bold;
+  color: blueviolet;
+}
+.part4{
+  display: grid;
+  grid-template-areas: 'one two three'
+                        'one two three';
+grid-gap: 100px;
+margin: 90px;
 }
