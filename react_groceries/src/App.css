@@ -129,23 +129,22 @@ tbody {
   text-decoration-color: red;
   text-decoration-style: solid;
 }
-button{
+button {
   box-shadow: 2px 2px 0px rgb(35, 125, 177);
   border-radius: 8px;
   border-style: none;
 }
 .later {
-  
   border-radius: 8px;
   border-style: none;
   width: 80px;
   height: 40px;
   box-shadow: 2px 2px 0px cadetblue;
- background-color: rgb(183, 185, 183);
- font-size: 25px;
- font-weight: 700;
+  background-color: rgb(183, 185, 183);
+  font-size: 25px;
+  font-weight: 700;
 }
-.delete{
+.delete {
   border-radius: 8px;
   border-style: none;
   width: 80px;
@@ -154,17 +153,15 @@ button{
   background-color: red;
   font-size: 16px;
   font-weight: 900;
-  
 }
 
-.now{
+.now {
   border-radius: 8px;
   border-style: none;
   width: 80px;
   height: 40px;
   box-shadow: 2px 2px 0px cadetblue;
- background-color: green;
- font-size: 25px;
- font-weight: 700;
- 
+  background-color: green;
+  font-size: 25px;
+  font-weight: 700;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-let allItems = [];
+
 class GrocceryForm extends Component {
   constructor() {
     super();
@@ -22,14 +22,12 @@ class GrocceryForm extends Component {
     };
   }
 
+  
 
   displayItemsHandler = (event) => {
     this.setState({
       [event.target.id]: event.target.value,
     });
-
-
-
 
     // put a line through items on check box
     const inputs = document.querySelectorAll("input[type='checkbox']");
@@ -46,54 +44,46 @@ class GrocceryForm extends Component {
       }
     }
 
-
-
     //delete button to delete
-   
-    
   };
 
 
 
-deletItemHandler =(event)=>{
-  this.setState({
-    [event.target.id]: event.target.value,
-  });
-  const crossOut = document.querySelectorAll("tbody");
-  let deleteIndex = event.target.id;
-  deleteIndex = parseInt(deleteIndex);
+  deletItemHandler = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value,
+    });
+    const crossOut = document.querySelectorAll("tbody");
+    let deleteIndex = event.target.id;
+    deleteIndex = parseInt(deleteIndex);
 
-  let newGroceries1 = this.state.groceries.slice(0, deleteIndex);
-  let newGroceries2 = this.state.groceries.slice(
-    deleteIndex + 1,
-    crossOut.length
-  );
-  let newGroceries = newGroceries1.concat(newGroceries2);
-  this.state.groceries = newGroceries;
-
-}
-
+    let newGroceries1 = this.state.groceries.slice(0, deleteIndex);
+    let newGroceries2 = this.state.groceries.slice(
+      deleteIndex + 1,
+      crossOut.length
+    );
+    let newGroceries = newGroceries1.concat(newGroceries2);
+    this.state.groceries = newGroceries;
+  };
 
 
-toogleItemHandler=(event)=>{
-  this.setState({
-    [event.target.id]: event.target.value,
-  });
 
-  let toggleIndex = event.target.id
+  toogleItemHandler = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value,
+    });
 
-  let toggleHtml =  document.getElementById(`${toggleIndex}`)
+    let toggleIndex = event.target.id;
 
-  toggleHtml.classList.toggle("now")
-  if (event.target.textContent === "Later") {
-    event.target.textContent = "NOw";
-  } else {
-    event.target.textContent = "Later";
-  }
+    let toggleHtml = document.getElementById(`${toggleIndex}`);
 
-
-}
-
+    toggleHtml.classList.toggle("now");
+    if (event.target.textContent === "Later") {
+      event.target.textContent = "NOw";
+    } else {
+      event.target.textContent = "Later";
+    }
+  };
 
 
 
@@ -108,9 +98,6 @@ toogleItemHandler=(event)=>{
     });
     event.preventDefault();
     this.groceries = itemsArray;
-    
-
-  
   };
 
   render() {
@@ -167,8 +154,6 @@ toogleItemHandler=(event)=>{
           </button>
         </form>
 
-
-
         <div id="itemList">
           <table onChange={this.displayItemsHandler}>
             <thead>
@@ -184,7 +169,7 @@ toogleItemHandler=(event)=>{
             </thead>
             {this.state.groceries.map((Grocery, index) => (
               <tbody key={index} id={index}>
-                {console.log(this.state.groceries[1])}
+               
                 <tr>
                   <td>{Grocery.username}</td>
                   <td>{Grocery.itemName}</td>
@@ -198,10 +183,19 @@ toogleItemHandler=(event)=>{
                       type="checkbox"
                     />
                   </td>
-                  <td><button className="later" id={`later${index}`} onClick={this.toogleItemHandler}>Later</button></td>
-                  
                   <td>
-                    <button className="delete"
+                    <button
+                      className="later"
+                      id={`later${index}`}
+                      onClick={this.toogleItemHandler}
+                    >
+                      Later
+                    </button>
+                  </td>
+
+                  <td>
+                    <button
+                      className="delete"
                       id={index}
                       type="button"
                       onClick={this.deletItemHandler}
@@ -209,15 +203,10 @@ toogleItemHandler=(event)=>{
                       DELETE
                     </button>
                   </td>
-                  
                 </tr>
-
-             
               </tbody>
             ))}
           </table>
-
-         
         </div>
       </div>
     );
