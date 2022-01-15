@@ -22,12 +22,19 @@ class GrocceryForm extends Component {
     };
   }
 
+
   displayItemsHandler = (event) => {
     this.setState({
       [event.target.id]: event.target.value,
     });
-    var inputs = document.querySelectorAll("input[type='checkbox']");
-    var crossOut = document.querySelectorAll("tbody");
+
+
+
+
+    // put a line through items on check box
+    const inputs = document.querySelectorAll("input[type='checkbox']");
+    const crossOut = document.querySelectorAll("tbody");
+
     for (let i = 0; i < inputs.length; i++) {
       if (inputs[i].checked === true) {
         let xout = i;
@@ -38,7 +45,57 @@ class GrocceryForm extends Component {
         crossOut[xout].style.textDecorationLine = "none";
       }
     }
+
+
+
+    //delete button to delete
+   
+    
   };
+
+
+
+deletItemHandler =(event)=>{
+  this.setState({
+    [event.target.id]: event.target.value,
+  });
+  const crossOut = document.querySelectorAll("tbody");
+  let deleteIndex = event.target.id;
+  deleteIndex = parseInt(deleteIndex);
+
+  let newGroceries1 = this.state.groceries.slice(0, deleteIndex);
+  let newGroceries2 = this.state.groceries.slice(
+    deleteIndex + 1,
+    crossOut.length
+  );
+  let newGroceries = newGroceries1.concat(newGroceries2);
+  this.state.groceries = newGroceries;
+
+}
+
+
+
+toogleItemHandler=(event)=>{
+  this.setState({
+    [event.target.id]: event.target.value,
+  });
+
+  let toggleIndex = event.target.id
+
+  let toggleHtml =  document.getElementById(`${toggleIndex}`)
+
+  toggleHtml.classList.toggle("now")
+  if (event.target.textContent === "Later") {
+    event.target.textContent = "NOw";
+  } else {
+    event.target.textContent = "Later";
+  }
+
+
+}
+
+
+
 
   handleSubmit = (event) => {
     const itemsArray = [];
@@ -51,13 +108,9 @@ class GrocceryForm extends Component {
     });
     event.preventDefault();
     this.groceries = itemsArray;
-    console.log(itemsArray[1]);
-    allItems.push(itemsArray);
-    console.log(allItems[1]);
+    
 
-    // {receipts.map((ReceiptData, index) => {
-    //     return <Receipt ReceipData={ReceiptData} key={index} title={index} />;
-    //   })}
+  
   };
 
   render() {
@@ -113,6 +166,9 @@ class GrocceryForm extends Component {
             Add To List
           </button>
         </form>
+
+
+
         <div id="itemList">
           <table onChange={this.displayItemsHandler}>
             <thead>
@@ -128,7 +184,7 @@ class GrocceryForm extends Component {
             </thead>
             {this.state.groceries.map((Grocery, index) => (
               <tbody key={index} id={index}>
-                {console.log(Grocery[index])}
+                {console.log(this.state.groceries[1])}
                 <tr>
                   <td>{Grocery.username}</td>
                   <td>{Grocery.itemName}</td>
@@ -142,17 +198,26 @@ class GrocceryForm extends Component {
                       type="checkbox"
                     />
                   </td>
+                  <td><button className="later" id={`later${index}`} onClick={this.toogleItemHandler}>Later</button></td>
+                  
                   <td>
-                    <button>{"DELETE"}</button>
+                    <button className="delete"
+                      id={index}
+                      type="button"
+                      onClick={this.deletItemHandler}
+                    >
+                      DELETE
+                    </button>
                   </td>
+                  
                 </tr>
 
-                {/* <DisplayList Grocery={Grocery} key={index}  /> */}
+             
               </tbody>
             ))}
           </table>
 
-          {/* <p>{this.props.grocery}</p> */}
+         
         </div>
       </div>
     );
