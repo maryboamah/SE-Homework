@@ -17,7 +17,6 @@ class GrocceryForm extends Component {
           units: "",
           quantity: 0,
           isPurchased: false,
-          
         },
       ],
     };
@@ -28,27 +27,20 @@ class GrocceryForm extends Component {
       [event.target.id]: event.target.value,
     });
     var inputs = document.querySelectorAll("input[type='checkbox']");
-    var crossOut = document.querySelectorAll("tbody")
-    for(let i=0; i<inputs.length; i++){
-if(inputs[i].checked === true){
-  let xout = i;  
-  console.log(crossOut[xout]);
-  crossOut[xout].style.textDecorationLine = "line-through"
-
-  
-
-
-}else if(inputs[i].checked === false){
- let xout = i
- crossOut[xout].style.textDecorationLine = "none"
-
-}
-
+    var crossOut = document.querySelectorAll("tbody");
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked === true) {
+        let xout = i;
+        console.log(crossOut[xout]);
+        crossOut[xout].style.textDecorationLine = "line-through";
+      } else if (inputs[i].checked === false) {
+        let xout = i;
+        crossOut[xout].style.textDecorationLine = "none";
+      }
     }
   };
 
   handleSubmit = (event) => {
-    
     const itemsArray = [];
     // itemsArray.push(this.state)
     console.log(itemsArray);
@@ -62,7 +54,6 @@ if(inputs[i].checked === true){
     console.log(itemsArray[1]);
     allItems.push(itemsArray);
     console.log(allItems[1]);
-    
 
     // {receipts.map((ReceiptData, index) => {
     //     return <Receipt ReceipData={ReceiptData} key={index} title={index} />;
@@ -73,7 +64,7 @@ if(inputs[i].checked === true){
     return (
       <div className="addgroccery">
         <h2>Add Your Groccery</h2>
-        <form className="form" >
+        <form className="form">
           <label htmlFor="username" id="one">
             Name:
           </label>
@@ -124,8 +115,7 @@ if(inputs[i].checked === true){
         </form>
         <div id="itemList">
           <table onChange={this.displayItemsHandler}>
-            
-            <thead >
+            <thead>
               <tr>
                 <th>Name</th>
                 <th>Item Name</th>
@@ -140,22 +130,17 @@ if(inputs[i].checked === true){
               <tbody key={index} id={index}>
                 {console.log(Grocery[index])}
                 <tr>
-                <td>{Grocery.username}</td>
+                  <td>{Grocery.username}</td>
                   <td>{Grocery.itemName}</td>
                   <td>{Grocery.brand}</td>
                   <td>{Grocery.units}</td>
                   <td>{Grocery.quantity}</td>
                   <td>
-                    
                     <input
                       id={index}
                       onChange={this.displayItemsHandler}
-                      
-                  
-                    
-                      type="checkbox" 
+                      type="checkbox"
                     />
-                    
                   </td>
                   <td>
                     <button>{"DELETE"}</button>

@@ -1,131 +1,131 @@
-*{
+* {
   box-sizing: border-box;
 }
 
 /* nav bar */
-.header{
+.header {
   height: 40px;
   background-color: #a8dadc;
   margin: 7px;
-  box-shadow: 2px 3px 2px 0px #0c6669 ;
+  box-shadow: 2px 3px 2px 0px #0c6669;
   display: flex;
-  
+
   justify-content: space-between;
 }
-.header p{
+.header p {
   margin: 6px;
   font-size: 20px;
   font-weight: 900;
 }
-.header a{
+.header a {
   text-decoration: none;
   color: #1d3557;
 }
 
 /* main component */
-.main{
+.main {
   text-align: center;
 }
-.addgrocery{
+.addgrocery {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
-
 
 /* input grid */
 
-.form{
+.form {
   display: grid;
-  grid-template-areas: 'one two'
-                       'three four'
-                       'five six'
-                       'seven eight'
-                       'nine ten'
-                       'eleven twelve';
-                       justify-content: center;
-
+  grid-template-areas:
+    "one two"
+    "three four"
+    "five six"
+    "seven eight"
+    "nine ten"
+    "eleven twelve";
+  justify-content: center;
 }
 
-#one{
+#one {
   grid-area: one;
 }
-#username{
+#username {
   grid-area: two;
 }
-#three{
+#three {
   grid-area: three;
 }
-#itemName{
+#itemName {
   grid-area: four;
 }
-#five{
+#five {
   grid-area: five;
 }
-#brand{
+#brand {
   grid-area: six;
 }
 
-#seven{
+#seven {
   grid-area: seven;
 }
-#units{
+#units {
   grid-area: eight;
 }
-#nine{
+#nine {
   grid-area: nine;
 }
-#quantity{
+#quantity {
   grid-area: ten;
 }
-#eleven{
+#eleven {
   grid-area: twelve;
   margin-bottom: 70px;
 }
 
-
-
-
-
 .form label {
- font-size: 20px;
- font-weight: 800;
+  font-size: 20px;
+  font-weight: 800;
 
- line-height: 44px;
- text-align: left;
+  line-height: 44px;
+  text-align: left;
 }
 .form input {
   height: 35px;
 }
-.form button{
+.form button {
   font-weight: 900;
- 
+
   height: 50px;
   margin-top: 20px;
-  
+
   font-size: 20px;
 }
-table{
- margin: auto;
+table {
+  margin: auto;
 }
-#itemList td, #itemList th {
+#itemList td,
+#itemList th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-#itemList tr:nth-child(even){background-color: #ca7f7f;}
-tr:hover {background-color: #ddd;}
-#nocolor th{background-color: white;}
+#itemList tr:nth-child(even) {
+  background-color: #ca7f7f;
+}
+tr:hover {
+  background-color: #ddd;
+}
+#nocolor th {
+  background-color: white;
+}
 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
-tbody{
+tbody {
   text-decoration-thickness: 50%;
   text-decoration-color: red;
   text-decoration-style: solid;
-  
 }
