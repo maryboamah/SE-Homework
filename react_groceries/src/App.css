@@ -124,6 +124,8 @@ th {
   color: white;
 }
 tbody{
+  text-decoration-thickness: 50%;
   text-decoration-color: red;
   text-decoration-style: solid;
+  
 }
