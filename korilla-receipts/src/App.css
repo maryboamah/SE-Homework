@@ -37,46 +37,43 @@
   }
 } */
 
-.App{
- text-align: center;
+.App {
+  text-align: center;
 }
-.part2{
+.part2 {
   border-radius: 0px;
-  border-style:solid;
+  border-style: solid;
   border-color: crimson;
- 
-   text-align: left;   
-  
+
+  text-align: left;
 }
-.part{
-  
+.part {
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-areas: 'one two three'
-                        ;
-grid-gap: 100px;
-margin: 90px;
-  
+  grid-template-areas: "one two three";
+  grid-gap: 100px;
+  margin: 90px;
 }
 
-#receipt-0{
+#receipt-0 {
   grid-area: one;
 }
-#receipt-1{
+#receipt-1 {
   grid-area: two;
 }
-#receipt-2{
+#receipt-2 {
   grid-area: three;
 }
 
-.head{
+.head {
   font-weight: bold;
   color: blueviolet;
 }
-.part4{
+.part4 {
   display: grid;
-  grid-template-areas: 'one two three'
-                        'one two three';
-grid-gap: 100px;
-margin: 90px;
+  grid-template-areas:
+    "one two three"
+    "one two three";
+  grid-gap: 100px;
+  margin: 90px;
 }

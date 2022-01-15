@@ -53,3 +53,13 @@ font-size: 20px;
   table, th, td {
     border: 1px solid black;
   }
+
+  /* new */
+  .unit{
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: 2px 3px 4px #ebe0e0;
+      height: 7
+      6           00px;
+      border-radius: 8px;
+  }

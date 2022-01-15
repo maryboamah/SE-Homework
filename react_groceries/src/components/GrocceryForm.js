@@ -75,10 +75,10 @@ class GrocceryForm extends Component {
     let toggleHtml = document.getElementById(`${toggleIndex}`);
 
     toggleHtml.classList.toggle("now");
-    if (event.target.textContent === "Later") {
+    if (event.target.textContent === "LATER") {
       event.target.textContent = "NOw";
     } else {
-      event.target.textContent = "Later";
+      event.target.textContent = "LATER";
     }
   };
 
@@ -86,7 +86,7 @@ class GrocceryForm extends Component {
     event.preventDefault();
     const itemsArray = [];
     // itemsArray.push(this.state)
-    console.log(itemsArray);
+   
 
     this.setState({
       ...itemsArray.push(this.state),
@@ -96,11 +96,43 @@ class GrocceryForm extends Component {
     this.groceries = itemsArray;
   };
 
+
+handleDefault=(event)=>{
+  event.preventDefault();
+}
+
+
+//set isPurchased to true or false
+handlePurchased=(event)=>{
+
+  this.setState({
+    [event.target.id]: event.target.value,
+  });
+
+  this.setState(state=>{
+    if(state.isPurchased === false){
+     
+      event.target.src = '/emptycheck.png'
+      console.log(this.state.isPurchased)
+     return {isPurchased:true}
+    
+}else{
+  
+  event.target.src= '/tick.png'
+
+  return {isPurchased:false}
+}
+  })
+
+}
+
+
   render() {
+    
     return (
       <div className="addgroccery">
         <h2>Add Your Groccery</h2>
-        <form className="form">
+        <form className="form"onSubmit={this.handleSubmit}>
           <label htmlFor="username" id="one">
             Name:
           </label>
@@ -145,13 +177,13 @@ class GrocceryForm extends Component {
             type="number"
           />
 
-          <button type="submit" onClick={this.handleSubmit} id="eleven">
+          <button type="submit"   id="eleven">
             Add To List
           </button>
         </form>
 
-        <div id="itemList">
-          <table onChange={this.displayItemsHandler}>
+        <div id="itemList" >
+          <table>
             <thead>
               <tr>
                 <th>Name</th>
@@ -159,6 +191,8 @@ class GrocceryForm extends Component {
                 <th>Brand Name</th>
                 <th>Units</th>
                 <th>Quantity</th>
+                <th>Not Needed</th>
+                <th>Purchased</th>
                 <th style={{ backgroundColor: "white", border: "none" }}></th>
                 <th style={{ backgroundColor: "white", border: "none" }}></th>
               </tr>
@@ -179,14 +213,18 @@ class GrocceryForm extends Component {
                     />
                   </td>
                   <td>
+                   <img src="/emptycheck.png" alt="emptycheckbox" className="check" id={`check${index}`} onClick={this.handlePurchased}></img>
+                  </td>
+                  <td>
                     <button
                       className="later"
                       id={`later${index}`}
                       onClick={this.toogleItemHandler}
                     >
-                      Later
+                      LATER
                     </button>
                   </td>
+                  
 
                   <td>
                     <button
@@ -198,6 +236,8 @@ class GrocceryForm extends Component {
                       DELETE
                     </button>
                   </td>
+                  
+
                 </tr>
               </tbody>
             ))}

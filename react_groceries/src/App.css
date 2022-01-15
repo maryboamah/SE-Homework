@@ -141,8 +141,8 @@ button {
   height: 40px;
   box-shadow: 2px 2px 0px cadetblue;
   background-color: rgb(183, 185, 183);
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 900;
 }
 .delete {
   border-radius: 8px;
@@ -164,4 +164,17 @@ button {
   background-color: green;
   font-size: 25px;
   font-weight: 700;
+}
+.purchased {
+  border-radius: 8px;
+  border-style: none;
+  width: 160px;
+  height: 40px;
+  box-shadow: 2px 2px 0px rgb(16, 101, 170);
+  background-color: rgb(183, 185, 183);
+  font-size: 19px;
+  font-weight: 900;
+}
+ img{
+  width:50px;
 }

@@ -1,6 +1,4 @@
-function Footer(){
-return(<div>
-    This is Footer
-</div>)
+function Footer() {
+  return <div>This is Footer</div>;
 }
-export default Footer
+export default Footer;
