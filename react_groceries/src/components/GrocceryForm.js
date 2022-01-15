@@ -22,8 +22,6 @@ class GrocceryForm extends Component {
     };
   }
 
-  
-
   displayItemsHandler = (event) => {
     this.setState({
       [event.target.id]: event.target.value,
@@ -47,12 +45,11 @@ class GrocceryForm extends Component {
     //delete button to delete
   };
 
-
-
   deletItemHandler = (event) => {
     this.setState({
       [event.target.id]: event.target.value,
     });
+
     const crossOut = document.querySelectorAll("tbody");
     let deleteIndex = event.target.id;
     deleteIndex = parseInt(deleteIndex);
@@ -63,10 +60,10 @@ class GrocceryForm extends Component {
       crossOut.length
     );
     let newGroceries = newGroceries1.concat(newGroceries2);
-    this.state.groceries = newGroceries;
+    this.setState({
+      groceries: newGroceries,
+    });
   };
-
-
 
   toogleItemHandler = (event) => {
     this.setState({
@@ -85,9 +82,8 @@ class GrocceryForm extends Component {
     }
   };
 
-
-
   handleSubmit = (event) => {
+    event.preventDefault();
     const itemsArray = [];
     // itemsArray.push(this.state)
     console.log(itemsArray);
@@ -96,7 +92,7 @@ class GrocceryForm extends Component {
       ...itemsArray.push(this.state),
       groceries: [...this.state.groceries, ...itemsArray],
     });
-    event.preventDefault();
+
     this.groceries = itemsArray;
   };
 
@@ -169,7 +165,6 @@ class GrocceryForm extends Component {
             </thead>
             {this.state.groceries.map((Grocery, index) => (
               <tbody key={index} id={index}>
-               
                 <tr>
                   <td>{Grocery.username}</td>
                   <td>{Grocery.itemName}</td>
