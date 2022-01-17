@@ -1,0 +1,28 @@
+table {
+    margin: auto;
+  }
+   td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #ca7f7f;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  th {
+    background-color: white;
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+  }
+  tbody {
+    text-decoration-thickness: 50%;
+    text-decoration-color: red;
+    text-decoration-style: solid;
+  }
