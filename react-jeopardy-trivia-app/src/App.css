@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+
+#answer{
+  display: none;
+  font-size: 30px;
+  color: green;
+}
+
+h3{
+  font-weight: 500;
+  font-size: 40px;
+}
+button{
+  height: 30px;
+  width: 150px;
+  margin: 30px;
+}
+
+#question{
+  font-size: 30px;
+  font-weight: 200;
+  color: blueviolet;
+}
+
+#category{
+  font-size: 30px;
+}
+#points{
+  font-size: 40px;
+  color: red;
+}
+
+table {
+  margin: auto;
+}
+ td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #ca7f7f;
+}
+tr:hover {
+  background-color: #ddd;
+}
+th {
+  background-color: white;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+tbody {
+  text-decoration-thickness: 50%;
+  text-decoration-color: red;
+  text-decoration-style: solid;
+}
+
+.answer{
+  display: none;
+}
+
+.hidedetails{
+  display: block;
+}
+
+
+.reveal{
+  display: none;
+}
