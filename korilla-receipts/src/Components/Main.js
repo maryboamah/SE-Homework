@@ -14,7 +14,7 @@ function Main() {
         </h2>
       </div>
       <div className="part4">
-        {receipts.map((ReceiptData, index) => {
+        {receipts.map((ReceiptData, index)=>{
           if (ReceiptData.paid === false) {
             return (
               <Receipt ReceipData={ReceiptData} key={index} title={index} />

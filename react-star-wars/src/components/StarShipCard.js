@@ -1,7 +1,7 @@
 
 import FetcData from "./FetchData"
 
-import Nav from "./Nav"
+
 
 function StarShipCard(){
     const { data } = FetcData("https://swapi.dev/api/starships")

@@ -15,7 +15,7 @@ class GrocceryForm extends Component {
           itemName: "",
           brand: "",
           units: "",
-          quantity: 0,
+          quantity: "",
           isPurchased: false,
         },
       ],
@@ -24,6 +24,7 @@ class GrocceryForm extends Component {
 
   displayItemsHandler = (event) => {
     this.setState({
+    
       [event.target.id]: event.target.value,
     });
 
@@ -148,7 +149,7 @@ handlePurchased=(event)=>{
           <input
             id="itemName"
             onChange={this.displayItemsHandler}
-            value={this.state.groceries.itemName}
+            value={this.state.itemName}
           />
           <label htmlFor="brand" id="five">
             Brand Name:
@@ -197,7 +198,7 @@ handlePurchased=(event)=>{
                 <th style={{ backgroundColor: "white", border: "none" }}></th>
               </tr>
             </thead>
-            {this.state.groceries.map((Grocery, index) => (
+            {  this.state.groceries.map((Grocery, index) => (
               <tbody key={index} id={index}>
                 <tr>
                   <td>{Grocery.username}</td>
