@@ -177,7 +177,6 @@
   grid-template-areas: "one two";
 }
 #contact-side {
- 
   background-color: #a8dadc;
   grid-area: one;
   margin-left: 10px;
@@ -611,7 +610,6 @@ legend {
   font-size: 30px;
 }
 
-
 /* About Css */
 
 .aboutus {
@@ -695,4 +693,3 @@ legend {
     left: 300px;
   }
 }
-

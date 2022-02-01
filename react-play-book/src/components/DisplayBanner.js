@@ -1,9 +1,4 @@
-
-
-function DisplayBanner(){
-    return(<div className="displaybanner">
-        
-
-    </div>)
+function DisplayBanner() {
+  return <div className="displaybanner"></div>;
 }
-export default DisplayBanner
+export default DisplayBanner;

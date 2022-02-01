@@ -20,9 +20,10 @@ useEffect(()=>{
     setCategory(document.getElementById("select1").value)
     setDifficulty(document.getElementById("select2").value)
     
-    if(category ==="" || difficulty ==="" ){
-      alert("Enter Category or Difficulty or default category will be used")
-    }
+    // if(category ==="" || difficulty ==="" ){
+    //   alert("Enter Category or Difficulty or default category will be used")
+    // }
+    startPlay()
   }
 
 }, [category, difficulty])
@@ -47,7 +48,8 @@ useEffect(()=>{
   const { data } = FetchData(
     `https://opentdb.com/api.php?amount=34&category=${category}&difficulty=${difficulty}&type=multiple`
   );
-
+console.log(category)
+console.log(difficulty)
   const questions = [];
   data &&
     data.results.map((trivia, index) => (
@@ -279,21 +281,22 @@ getQuestionsAndANswers()
       
         <option value = ""> ...Select Category..  
                 </option>  
-            <option value = "inauthor"> Books  
+            <option value = "10"> Books  
             </option>  
-            <option value = "intitle"> Film
+            <option value = "11"> Film
             </option>  
-            <option value = "inpublisher"> Computers 
+            <option value = "18"> Computers 
             </option>  
-            <option value = "subject">Mathematics
+            <option value = "19">Mathematics
             </option>  
           
-        <option value = "isbn"> Sports </option>  
-        <option value = "isbn"> History  </option>  
-        <option value = "isbn"> Arts </option>  
-        <option value = "isbn"> Animals </option>  
-        <option value = "isbn"> Geography </option> 
-        <option value = "isbn"> Politics </option> 
+        <option value = "21"> Sports </option>  
+        <option value = "23"> History  </option>  
+        <option value = "25"> Arts </option>  
+        <option value = "27"> Animals </option>  
+        <option value = "22"> Geography </option> 
+        <option value = "24"> Politics </option> 
+        <option value = "26"> Celebrities </option> 
         </select>
         <select id="select2">
      
@@ -301,9 +304,9 @@ getQuestionsAndANswers()
                 </option>  
             <option value = "easy"> Easy 
             </option>  
-            <option value = "imedium"> Medium 
+            <option value = "medium"> Medium 
             </option>  
-            <option value = "ihard"> Hard
+            <option value = "hard"> Hard
             </option>  
               
         </select>
