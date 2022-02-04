@@ -17,6 +17,8 @@ function FetchData(url) {
   useEffect(() => {
     allData();
   }, []);
+ 
+
   return { data, data1, data2, data3 };
 }
 export default FetchData;
