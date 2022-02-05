@@ -4,7 +4,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter a whole number ");
+        System.out.print("Enter a positive whole number within this 2,147,483,647 (231-1) range   ");
         int userNumber = scan.nextInt();
         int previousNumber = 0;
         int currentNumber = 1;
