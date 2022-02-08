@@ -1,6 +1,7 @@
 package calculator;
 import java.util.Scanner;
-
+import java.util.*;
+import java.lang.*;
 public class Calculator {
 	
 	static int add(int a, int b) {
@@ -9,15 +10,20 @@ public class Calculator {
 	}
 	
 static int subtract(int a , int b) {
-		return a - b;
+	int result = a - b;
+	return result;
 	}
 static int multiply(int a, int b) {
-	return a * b;
+	int result = a * b;
+	return result;
 }
-static int divide(int a, int b) {
-		return a / b;
+static double divide(int a, int b) {
+	double result = (double)a / (double)b;
+	return result;
 	}
-
+static void userInput() {
+	
+}
 	
 	
 	public static void main(String[] args) {
@@ -33,33 +39,58 @@ static int divide(int a, int b) {
 		  
 		  
 	        int userChoice = scan.nextInt();
-	        System.out.println("Enter the two numbers you want to work on");
-	        
-	        System.out.println("ENTER FIRST NUMBER");
-	        int firstNumber = scan.nextInt();
-	        System.out.println("ENTER SECOND NUMBER");
-	        int secondNumber = scan.nextInt();
+	      
 	        
 	        
 	        switch (userChoice) {
+	        
 	        case 1:
-	          System.out.println( firstNumber + "+"  + secondNumber + "=" + add(firstNumber, secondNumber));
+	        	
+	        	  System.out.println("Enter the two whole numbers you want to work on");
+	  	        
+	  	        System.out.println("ENTER FIRST NUMBER");
+	  	        int firstNumberAdd = scan.nextInt();
+	  	        System.out.println("ENTER SECOND NUMBER");
+	  	        int secondNumberAdd = scan.nextInt();
+	          System.out.println( firstNumberAdd + "+"  + secondNumberAdd + "=" + add(firstNumberAdd, secondNumberAdd));
 	          
 	          break;
 	        case 2:
-	          System.out.println("Tuesday");
+	        	
+	        	  System.out.println("Enter the two whole numbers you want to work on");
+	  	        
+	  	        System.out.println("ENTER FIRST NUMBER");
+	  	        int firstNumberSubtract = scan.nextInt();
+	  	        System.out.println("ENTER SECOND NUMBER");
+	  	        int secondNumberSubtract = scan.nextInt();
+	          System.out.println(firstNumberSubtract + "-"  + secondNumberSubtract + "=" + subtract(firstNumberSubtract, secondNumberSubtract));
 	          break;
 	        case 3:
-	          System.out.println("Wednesday");
+	        	
+	        	  System.out.println("Enter the two whole numbers you want to work on");
+	  	        
+	  	        System.out.println("ENTER FIRST NUMBER");
+	  	        int firstNumberMultiply = scan.nextInt();
+	  	        System.out.println("ENTER SECOND NUMBER");
+	  	        int secondNumberMultiply = scan.nextInt();
+	          System.out.println(firstNumberMultiply + "*"  + secondNumberMultiply + "=" + multiply(firstNumberMultiply, secondNumberMultiply));
 	          break;
 	        case 4:
-	          System.out.println("Thursday");
+	        	  System.out.println("Enter the two whole numbers you want to work on");
+	  	        
+	  	        System.out.println("ENTER FIRST NUMBER");
+	  	        int firstNumberDivide = scan.nextInt();
+	  	        System.out.println("ENTER SECOND NUMBER");
+	  	        int secondNumberDivide = scan.nextInt();
+	          System.out.println(firstNumberDivide + "/"  + secondNumberDivide + "=" + divide(firstNumberDivide, secondNumberDivide));
 	          break;
 	        case 5:
-	          System.out.println("Friday");
+	        	
+	          System.exit(0);
 	          break;
 	       default:
-	          System.out.println("");
+	          System.out.println("The number you chose is not an option. Good Bye");
+	          System.exit(0);
 	          break;
 	        
 	      }
