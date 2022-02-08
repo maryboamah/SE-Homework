@@ -85,11 +85,11 @@ static void userInput() {
 	          System.out.println(firstNumberDivide + "/"  + secondNumberDivide + "=" + divide(firstNumberDivide, secondNumberDivide));
 	          break;
 	        case 5:
-	        	
+	        	System.out.println("Thanks for using the Calculator. Good Bye");
 	          System.exit(0);
 	          break;
 	       default:
-	          System.out.println("The number you chose is not an option. Good Bye");
+	          System.out.println("The number " + userChoice + " is not an option. Good Bye");
 	          System.exit(0);
 	          break;
 	        
