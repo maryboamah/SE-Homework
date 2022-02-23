@@ -1,0 +1,78 @@
+package com.HomeWork.project;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+
+//create more instances
+@Scope(value="prototype")
+public class Insurance {
+	private String insuranceName;
+	private String insuranceAgentName;
+	private double montlyPremium;
+	private Date  startDate ;
+	private Date  endDate ;
+
+	public Insurance() {
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	public String getInsuranceName() {
+		return insuranceName;
+	}
+
+	public void setInsuranceName(String insuranceName) {
+		this.insuranceName = insuranceName;
+	}
+
+	public String getInsuranceAgentName() {
+		return insuranceAgentName;
+	}
+
+	public void setInsuranceAgentName(String insuranceAgentName) {
+		this.insuranceAgentName = insuranceAgentName;
+	}
+
+	public double getMontlyPremium() {
+		return montlyPremium;
+	}
+
+	public void setMontlyPremium(double montlyPremium) {
+		this.montlyPremium = montlyPremium;
+	}
+
+	
+	
+	
+
+
+
+	
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		
+		this.endDate = endDate;
+	}
+
+	
+	public void insuranceDetails() {
+		System.out.println( "Insurance [insuranceName=" + insuranceName + ", insuranceAgentName=" + insuranceAgentName
+				+ ", montlyPremium=" + montlyPremium + ", startDate=" + startDate + ", endDate=" + endDate + "]"
+	);
+	}
+	
+	
+	
+
+}

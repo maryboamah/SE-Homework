@@ -1,0 +1,91 @@
+package com.HomeWork.project;
+
+import java.text.SimpleDateFormat;
+import java.time.Period;
+import java.util.Date;
+import java.time.LocalDate;
+import java.time.Month;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+
+//create more instances
+@Scope(value="prototype")
+public class Insurance {
+	private String insuranceName;
+	private String insuranceAgentName;
+	private double montlyPremium;
+	private final LocalDate  startDate = LocalDate.now(); ;
+	private LocalDate  endDate ;
+
+	public Insurance() {
+		this.startDate;
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	public String getInsuranceName() {
+		return insuranceName;
+	}
+
+	public void setInsuranceName(String insuranceName) {
+		this.insuranceName = insuranceName;
+	}
+
+	public String getInsuranceAgentName() {
+		return insuranceAgentName;
+	}
+
+	public void setInsuranceAgentName(String insuranceAgentName) {
+		this.insuranceAgentName = insuranceAgentName;
+	}
+
+	public double getMontlyPremium() {
+		return montlyPremium;
+	}
+
+	public void setMontlyPremium(double montlyPremium) {
+		this.montlyPremium = montlyPremium;
+	}
+
+	
+	
+	
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(int year, Month month, int day ) {
+		LocalDate endate = LocalDate.of(year, month, day);
+		
+		this.endDate = endDate;
+	}
+
+	
+	public String insuranceDetails() {
+		String details =  "Insurance [insuranceName=" + insuranceName + ", insuranceAgentName=" + insuranceAgentName
+				+ ", montlyPremium=" + montlyPremium + ", startDate=" + startDate + ", endDate=" + endDate + "]"
+	;
+		return details;
+	}
+	
+	
+	public void getDurationOfInsurance() {
+		Period timeFrame = Period.between( this.endDate, this.startDate);
+		 int years = timeFrame.getYears();
+	        int months = timeFrame.getMonths();
+		System.out.println("The duration of your insurance is " + years + "  and  " + months +".\n");
+	}
+	
+
+}

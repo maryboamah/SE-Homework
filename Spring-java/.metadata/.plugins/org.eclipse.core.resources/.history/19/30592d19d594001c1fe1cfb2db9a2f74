@@ -1,0 +1,5 @@
+package com.HomeWork.project;
+
+public @interface author {
+
+}

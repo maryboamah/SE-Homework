@@ -1,0 +1,9 @@
+package com.HomeWork.project;
+
+public class HomeOwners {
+
+	public HomeOwners() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

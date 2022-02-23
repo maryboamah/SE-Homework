@@ -1,0 +1,19 @@
+package com.HomeWork.project;
+import org.springframework.stereotype.Component;
+
+
+
+@Component
+public class Renters {
+	private String renterNameString;
+	private int renterAge;
+	private String renterLocation;
+	private double monthlyRent;
+
+	public Renters() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}
