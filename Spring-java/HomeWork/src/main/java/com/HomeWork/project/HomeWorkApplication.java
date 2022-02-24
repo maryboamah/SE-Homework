@@ -26,6 +26,7 @@ public class HomeWorkApplication {
 		owner1.setOwnerName("Merchant");
 		owner1.setOwnerAge(35);
 		owner1.setOwnerLocation("Columbus");
+		owner1.setYearsOfBuyingHouse(20);
 		owner1.setInsurance(insurance1);
 		owner1.getInsurance().setEndDate("2023-04-19");
 		owner1.getInsurance().setStartDate("2022-04-19");
@@ -36,6 +37,7 @@ public class HomeWorkApplication {
 		
 		Renters tenant1 = context.getBean(Renters.class);
 		tenant1.setRenterName("Clifford");
+		tenant1.setYearsOfRenting(20);
 		tenant1.setMonthlyRent(1000);
 		tenant1.setRenterAge(34);
 		tenant1.setRenterLocation("Columbus");
@@ -50,7 +52,9 @@ public class HomeWorkApplication {
 		owner1.getInsurance().getDurationOfInsurance();
 		
 		owner1.homeOwnerDetails(owner1);
+		owner1.totalPaymentOverTheYears();
 		tenant1.rentersDetails(tenant1);
+		tenant1.totalPaymentOverTheYears();
 		
 		
 		

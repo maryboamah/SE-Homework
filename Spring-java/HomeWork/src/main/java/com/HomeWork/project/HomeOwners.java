@@ -18,6 +18,7 @@ public class HomeOwners {
 	private double montlyPayment;
 	private int ownerAge;
 	private double homeOwnerAssociationFee;
+	private int yearsOfBuyingHouse;
 	
 	@Autowired
 	
@@ -89,12 +90,34 @@ public class HomeOwners {
 	}
 
 
+	
+	
+	
+	public int getYearsOfBuyingHouse() {
+		return yearsOfBuyingHouse;
+	}
+
+
+	public void setYearsOfBuyingHouse(int yearsOfBuyingHouse) {
+		this.yearsOfBuyingHouse = yearsOfBuyingHouse;
+	}
+
+
 	public void homeOwnerDetails(HomeOwners homeowner) {
 		System.out.println( "HomeOwners [ownerName=" + ownerName + ", ownerLocation=" + ownerLocation + ", montlyPayment="
 				+ montlyPayment + ", ownerAge=" + ownerAge + ", homeOwnerAssociationFee=" + homeOwnerAssociationFee
 				+ ", insurance=" + homeowner.getInsurance().insuranceDetails() + "]"
 	);
 	}
+	
+	public void totalPaymentOverTheYears() {
+		double years = (double)this.getYearsOfBuyingHouse();
+		
+		double totalPayment = ((this.getMontlyPayment() * 12) * years )  + ((12 * this.getInsurance().getMontlyPremium()) * years) + ((this.getHomeOwnerAssociationFee() * 12) * years);
+		System.out.println("You have spent over " + totalPayment + "in the past " + this.getYearsOfBuyingHouse() + "  years on your house" );
+	}
+
+
 	
 	
 	

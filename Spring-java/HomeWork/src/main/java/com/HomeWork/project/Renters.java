@@ -10,6 +10,7 @@ public class Renters {
 	private int renterAge;
 	private String renterLocation;
 	private double monthlyRent;
+	private int yearsOfRenting;
 	
 	@Autowired
 	private Insurance insurance;
@@ -60,10 +61,27 @@ public class Renters {
 
 	
 	
+	
+	
+	public int getYearsOfRenting() {
+		return yearsOfRenting;
+	}
+
+	public void setYearsOfRenting(int yearsOfRenting) {
+		this.yearsOfRenting = yearsOfRenting;
+	}
+
 	public void rentersDetails(Renters tenant) {
 		System.out.println( "Renters [renterNameString=" + renterName + ", renterAge=" + renterAge + ", renterLocation="
 				+ renterLocation + ", monthlyRent=" + monthlyRent + ", insurance=" + tenant.getInsurance().insuranceDetails() + "]"
 				);
+	}
+	
+	public void totalPaymentOverTheYears() {
+		double years = (double)this.getYearsOfRenting();
+		
+		double totalPayment = ((this.getMonthlyRent() * 12) * years )  + ((12 * this.getInsurance().getMontlyPremium()) * years) ;
+		System.out.println("You have spent over " + totalPayment + " in the past " + this.getYearsOfRenting() + " years on rent" );
 	}
 	
 	
