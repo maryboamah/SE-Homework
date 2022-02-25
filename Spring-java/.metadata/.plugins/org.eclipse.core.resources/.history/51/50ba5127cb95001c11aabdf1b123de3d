@@ -106,7 +106,7 @@ public class HomeOwners {
 	public void homeOwnerDetails(HomeOwners homeowner) {
 		System.out.println( "HomeOwners [ownerName=" + ownerName + ", ownerLocation=" + ownerLocation + ", montlyPayment="
 				+ montlyPayment + ", ownerAge=" + ownerAge + ", homeOwnerAssociationFee=" + homeOwnerAssociationFee
-				+ ", insurance=" + homeowner.getInsurance().insuranceDetails() + "]" + "\n"
+				+ ", insurance=" + homeowner.getInsurance().insuranceDetails() + "]"
 	);
 	}
 	
@@ -114,7 +114,7 @@ public class HomeOwners {
 		double years = (double)this.getYearsOfBuyingHouse();
 		
 		double totalPayment = ((this.getMontlyPayment() * 12) * years )  + ((12 * this.getInsurance().getMontlyPremium()) * years) + ((this.getHomeOwnerAssociationFee() * 12) * years);
-		System.out.println(this.getOwnerName()+ ", you have spent over " + totalPayment + "in the past " + this.getYearsOfBuyingHouse() + "  years on your house" +"\n");
+		System.out.println(this.getOwnerName()+ ".You have spent over " + totalPayment + "in the past " + this.getYearsOfBuyingHouse() + "  years on your house" +"\n");
 	}
 
 

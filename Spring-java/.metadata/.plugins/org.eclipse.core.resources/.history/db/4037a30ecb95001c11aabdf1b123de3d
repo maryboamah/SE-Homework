@@ -73,7 +73,7 @@ public class Renters {
 
 	public void rentersDetails(Renters tenant) {
 		System.out.println( "Renters [renterNameString=" + renterName + ", renterAge=" + renterAge + ", renterLocation="
-				+ renterLocation + ", monthlyRent=" + monthlyRent + ", insurance=" + tenant.getInsurance().insuranceDetails() + "]" +"\n"
+				+ renterLocation + ", monthlyRent=" + monthlyRent + ", insurance=" + tenant.getInsurance().insuranceDetails() + "]"
 				);
 	}
 	
@@ -81,7 +81,7 @@ public class Renters {
 		double years = (double)this.getYearsOfRenting();
 		
 		double totalPayment = ((this.getMonthlyRent() * 12) * years )  + ((12 * this.getInsurance().getMontlyPremium()) * years) ;
-		System.out.println(this.getRenterName() + ", you have spent over " + totalPayment + " in the past " + this.getYearsOfRenting() + " years on rent" +"\n" );
+		System.out.println("You have spent over " + totalPayment + " in the past " + this.getYearsOfRenting() + " years on rent" );
 	}
 	
 	

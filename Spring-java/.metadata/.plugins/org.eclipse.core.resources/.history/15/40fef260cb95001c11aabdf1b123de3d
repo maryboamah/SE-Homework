@@ -73,7 +73,7 @@ public class Renters {
 
 	public void rentersDetails(Renters tenant) {
 		System.out.println( "Renters [renterNameString=" + renterName + ", renterAge=" + renterAge + ", renterLocation="
-				+ renterLocation + ", monthlyRent=" + monthlyRent + ", insurance=" + tenant.getInsurance().insuranceDetails() + "]" +"\n"
+				+ renterLocation + ", monthlyRent=" + monthlyRent + ", insurance=" + tenant.getInsurance().insuranceDetails() + "]"
 				);
 	}
 	

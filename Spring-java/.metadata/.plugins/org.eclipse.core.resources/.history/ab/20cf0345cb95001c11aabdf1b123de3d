@@ -106,7 +106,7 @@ public class HomeOwners {
 	public void homeOwnerDetails(HomeOwners homeowner) {
 		System.out.println( "HomeOwners [ownerName=" + ownerName + ", ownerLocation=" + ownerLocation + ", montlyPayment="
 				+ montlyPayment + ", ownerAge=" + ownerAge + ", homeOwnerAssociationFee=" + homeOwnerAssociationFee
-				+ ", insurance=" + homeowner.getInsurance().insuranceDetails() + "]" + "\n"
+				+ ", insurance=" + homeowner.getInsurance().insuranceDetails() + "]"
 	);
 	}
 	
