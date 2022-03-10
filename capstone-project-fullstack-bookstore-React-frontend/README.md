@@ -1,3 +1,9 @@
+
+# This is a book store full stack application
+The Front End(view) was made with React
+The BackEnd was made with Spring Boot
+It Loads data from an sql Database and also from 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
