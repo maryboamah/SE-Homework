@@ -31,7 +31,7 @@ I hope to add a login button where users can access the page and create groups
 ### `Database`
 
 Uses MySql database
-Has two tables
+and has two tables
 
 
 ## Author
